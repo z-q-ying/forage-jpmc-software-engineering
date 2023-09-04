@@ -12,11 +12,19 @@ This repository contains the tasks and accomplishments from the JP Morgan Chase'
 - React
 
 ## Demonstration
-After starting the web server on your local machine, click on **Start Streaming Data**. The data feed will then be refreshed and loaded continuously at 0.1-second intervals.
+### Getting Started
+To begin, start the web server on your local machine. Once the server is running, click **Start Streaming Data** just once.
+
+### What to Expect
+Upon activation, the data feed will display the ratio of Stock A's price to Stock B's price, refreshing continuously at intervals of 0.1 seconds. This ratio is the key metric we're tracking — not the individual stock prices. The reason for this is to help traders identify opportunities based on changes in the historical correlation between the two stocks.
 
 ![forage_jPMC_start_streaming](https://github.com/z-q-ying/forage-jpmc-software-engineering/assets/116849653/7898d9af-5304-41aa-809b-8709a578100f)
 
+### Why This Matters
+Traders aim to monitor the weakening or strengthening of correlation between two historically related stocks. A change could signify a trade opportunity, such as buying the underperforming stock and selling the outperforming one, with the expectation that their prices will eventually converge.
 
+### Advanced Features
+The graph also includes upper and lower bounds based on a historical correlation to help traders identify trading opportunities more easily. When the ratio crosses these bounds, an alert is triggered. In this demo, the red alert line appears whenever the ratio deviates by +/- 3% from the 12-month historical average. In a real-world scenario, traders might set this to +/- 10% based on a 12/24-month historical average, depending on their specific trading strategy.
 
 ## Acknowledgments
 This project is part of the JP Morgan Chase's Software Engineering virtual experience program.
